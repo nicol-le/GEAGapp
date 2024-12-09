@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajuda: Categorias de Pragas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Ajuda: Categorias de Pragas</h1>
+        </header>
+        <div class="categorias">
+            <!-- Categoria: Desfolha -->
+            <div class="categoria">
+                <button class="categoria-titulo">
+                    Desfolha <span class="seta">▼</span>
+                </button>
+                <div class="categoria-conteudo oculto">
+                    <div class="praga">
+                        <img src="Desfolha causada por Coleoptera (Besouros, carunchos, gorgulhos, joaninhas).jpg" alt="Coleoptera">
+                        <p>Besouros, carunchos, gorgulhos, joaninhas.</p>
+                    </div>
+                    <div class="praga">
+                        <img src="Desfolha causada por Hymenoptera (formigas).jpg" alt="Hymenoptera">
+                        <p>Formigas.</p>
+                    </div>
+                    <div class="praga">
+                        <img src="Desfolha causada por Lepidoptera (Borboletas, mariposas).jpg" alt="Lepidoptera">
+                        <p>Borboletas, mariposas.</p>
+                    </div>
+                    <div class="praga">
+                        <img src="Desfolha causada por Orthoptera (Gafanhoto, grilo.jpg" alt="Orthoptera">
+                        <p>Gafanhotos, grilos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button onclick="window.location.href='index.html'">Voltar</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const botoesCategoria = document.querySelectorAll('.categoria-titulo');
+
+            botoesCategoria.forEach((botao) => {
+                botao.addEventListener('click', () => {
+                    const conteudo = botao.nextElementSibling;
+                    const seta = botao.querySelector('.seta');
+                    
+                    // Alterna a visibilidade
+                    conteudo.classList.toggle('oculto');
+                    
+                    // Alterna a direção da seta
+                    if (conteudo.classList.contains('oculto')) {
+                        seta.textContent = '▼'; // Setinha para baixo
+                    } else {
+                        seta.textContent = '▲'; // Setinha para cima
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

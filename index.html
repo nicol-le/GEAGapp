@@ -1,0 +1,89 @@
+<body>
+    <header>
+        <img src="Design sem nome (20).png" alt="Logo"> <!-- Imagem da logo, caso tenha -->
+        <h1>GEAG - UFSCAR</h1>
+    </header>
+    
+
+    <div class="main-content">
+        <div class="app-container">
+            <header>
+                <h1>Registro de Pragas</h1>
+            </header>
+            
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Registro de Pragas</title>
+                    <link rel="stylesheet" href="styles.css"> <!-- Certifique-se de que o arquivo CSS esteja linkado corretamente -->
+                </head>
+                <body>
+                    <header>
+                        <h1>GEAG - UFSCAR</h1>
+                        <img src="logo.png" alt="Logo"> <!-- Imagem da logo, caso tenha -->
+                    </header>
+                
+                    <div class="main-content">
+                        <div class="app-container">
+                            <header>
+                                <h1>Registro de Pragas</h1>
+                            </header>
+                            <form id="pragaForm">
+                                <h1>Registro de Pragas</h1>
+                                <div class="form-group">
+                                    <label for="nomePragueiro">Nome do Pragueiro:</label>
+                                    <input type="text" id="nomePragueiro" placeholder="Digite seu nome">
+                                </div>
+                                <div class="form-group">
+                                    <label for="numeroPlanta">Número da Planta:</label>
+                                    <input type="number" id="numeroPlanta" readonly>
+                                    <button type="button" id="adicionarPlanta">Adicionar Planta</button>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nomePraga">Nome da Praga:</label>
+                                    <input type="text" id="nomePraga" placeholder="Ex.: Mosca-branca">
+                                </div>
+                                <div class="form-group">
+                                    <label for="quantidade">Quantidade:</label>
+                                    <input type="number" id="quantidade" placeholder="Digite a quantidade">
+                                </div>
+                                <div class="form-group">
+                                    <label for="observacoes">Observações:</label>
+                                    <textarea id="observacoes" placeholder="Detalhes sobre a planta ou praga"></textarea>
+                                </div>
+                    
+                                <button type="button" id="adicionarPraga">Adicionar Praga</button>
+                            </form>
+                            <button id="baixarExcel">Baixar Excel</button>
+                            <a href="ajuda.html">
+                                <button id="botaoAjuda" >❓ Ajuda</button>  
+                            </a>
+                        </div>
+                        <div class="visualizacao-dados">
+                            <h2>Dados Registrados</h2>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Planta</th>
+                                        <th>Pragueiro</th>
+                                        <th>Nome</th>
+                                        <th>Quantidade</th>
+                                        <th>Observações</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabelaDados">
+                                    <!-- Dados serão adicionados aqui dinamicamente -->
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                    </div>
+                
+               
+
+
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+                    <script src="script.js"></script>
+                    
+                </body>
+                </html>
+                               

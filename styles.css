@@ -1,0 +1,205 @@
+       /* Reset geral de margens e padding */
+       * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        padding-top: 60px; /* Garantindo que o conteúdo não fique em cima da barra */
+    }
+
+    /* Barra superior */
+header {
+    width: 100%;
+    height: 60px; /* Altura ajustada */
+    background-color: #003399;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+/* Ajuste do body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding-top: 60px; /* Deve ser igual à altura do header */
+}
+
+/* Ajuste do formulário */
+.main-content {
+    margin-top: 20px; /* Reduz o espaço adicional */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Logo menor para caber no header */
+header img {
+    height: 100px; /* Tamanho ajustado */
+    margin-right: 10px;
+}
+
+    
+    
+    /* Estilo do conteúdo da página */
+    .main-content {
+        margin-top: 80px; /* Deixa o espaço suficiente para a barra */
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Estilo do formulário */
+    .app-container {
+        max-width: 400px;
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+        z-index: 1;
+    }
+    
+    /* Títulos e campos de formulário */
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    
+    input, textarea, button {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    
+    button {
+        background: #003399;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+    
+    button:hover {
+        background: #0055cc;
+    }
+    
+    /* Botões gerais */
+    button#baixarExcel, button#botaoAjuda {
+        background-color: #003399;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+    }
+    
+    button#baixarExcel:hover, button#botaoAjuda:hover {
+        background-color: #0055cc;
+    }
+    
+    /* Estilo de ajuda */
+    .ajuda {
+        display: none;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin-top: 20px;
+        border-radius: 5px;
+        max-width: 400px;
+    }
+    
+    .ajuda.mostrar {
+        display: block;
+    }
+    
+    /* Categoria de pragas */
+    .categoria-praga {
+        margin-top: 10px;
+    }
+    
+    .categoria-praga h3 {
+        font-size: 18px;
+        cursor: pointer;
+        color: #003399;
+    }
+    
+    .categoria-praga ul {
+        display: none;
+        margin-top: 10px;
+        list-style: none;
+        padding-left: 20px;
+    }
+    
+    .categoria-praga ul li {
+        margin-bottom: 10px;
+    }
+    
+    .categoria-praga.open ul {
+        display: block;
+    }
+    
+    .categoria-praga img {
+        max-width: 100px;
+        border-radius: 5px;
+    }
+    
+    /* Responsividade */
+    @media (max-width: 600px) {
+        header {
+            height: 50px;
+        }
+    
+        .main-content {
+            margin-top: 70px; /* Ajustando para dispositivos menores */
+        }
+    
+        header h1 {
+            font-size: 18px;
+        }
+    
+        button {
+            padding: 8px;
+        }
+    }.visualizacao-dados {
+        margin-top: 20px;
+        width: 100%;
+        overflow-x: auto;
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+    
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+    }
+    
+    th {
+        background-color: #003399;
+        color: white;
+    }
+    
